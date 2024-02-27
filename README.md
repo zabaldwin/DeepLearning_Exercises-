@@ -3,5 +3,7 @@ This repository contains deep learning applications from ranging complexities us
 
 Provided example include:
 
+1) Image Classification w/ the MNIST dataset
+2)
 
 
