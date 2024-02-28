@@ -1,9 +1,10 @@
 # DeepLearning_Exercises
-This repository contains deep learning applications from ranging complexities using both PyTorch and TensorFlow. 
+This repository contains deep learning applications from ranging complexities using both PyTorch and TensorFlow.
 
-Provided example include:
+Provided examples touch on the main concepts that are necessary to understanding Deep Learning and include:
 
-1) Image Classification w/ the MNIST dataset
-2)
+1) Basic Fundamental Neural Network w/ the MNIST dataset
+2) Experiment w/ Activation Functions using the FashionMNIST dataset
+3) 
 
 
