@@ -7,6 +7,6 @@ Provided examples touch on the main concepts that are necessary to understanding
   2) Experiment w/ activation functions utilizing the FashionMNIST dataset
   3) Perform image classification using a DNN w/ the MNIST dataset | _TensorFlow_
   4) Perform image classification (with hyper-parameter tunning) using a CNN w/ the CIFAR-10 dataset | _PyTorch_
-  5) 
+  5) Generate realistic images by training a GAN w/ the CelebA dataset | _PyTorch_
 
 
