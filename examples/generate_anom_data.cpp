@@ -47,7 +47,6 @@ int main() {
         histBeforeInjection.Fill(dataPoint);
     }
 
-    // Create a canvas to display the histogram before injecting anomalies
     TCanvas canvasBefore("canvas_before_injection", "Response Histogram (Before Injection)", 800, 600);
     histBeforeInjection.Draw();
     histBeforeInjection.GetXaxis()->SetTitle("Response");
@@ -64,7 +63,6 @@ int main() {
         histAfterInjection.Fill(dataPoint);
     }
 
-    // Create a canvas to display the histogram after injecting anomalies
     TCanvas canvasAfter("canvas_after_injection", "Response Histogram (After Injection)", 800, 600);
     histAfterInjection.Draw();
     histAfterInjection.GetXaxis()->SetTitle("Response");
