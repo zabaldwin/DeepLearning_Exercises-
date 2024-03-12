@@ -1,4 +1,4 @@
-#include <iostream>
+#include <iostream>                                                                                                                                                                                   
 #include <vector>
 #include <TRandom3.h>
 #include <TFile.h>
@@ -7,7 +7,7 @@
 #include <TCanvas.h>
 
 using namespace std;
-                                                                                                                                                                                                      
+
 // Function to generate normal data
 vector<double> generateNormalData(int numEvents) {
     TRandom3 randGen;
@@ -41,21 +41,28 @@ int main() {
     // Generate normal data
     vector<double> normalData = generateNormalData(numNormalEvents);
 
-    // Create a histogram to visualize the response distribution before injecting anomalies
-    TH1D histBeforeInjection("response_histogram_before_injection", "Response Distribution (Before Injection)", 100, -10, 10);
+    // Inject anomalies into normal data
+    injectAnomalies(normalData, numAnomalies);
+
+    // Create a ROOT file to store the mixed dataset
+    TFile outputFile("mixedData.root", "RECREATE");
+
+    // Create a TTree
+    TTree tree("tree", "Particle Detector Responses");
+
+    // Create a branch to store the detector responses
+    double response;
+    tree.Branch("response", &response);
+
+    // Fill the tree with mixed data (only after injecting anomalies)
     for (const auto& dataPoint : normalData) {
-        histBeforeInjection.Fill(dataPoint);
+        response = dataPoint;
+        tree.Fill();
     }
 
-    TCanvas canvasBefore("canvas_before_injection", "Response Histogram (Before Injection)", 800, 600);
-    histBeforeInjection.Draw();
-    histBeforeInjection.GetXaxis()->SetTitle("Response");
-    histBeforeInjection.GetYaxis()->SetTitle("Frequency");
-    canvasBefore.Draw();
-    canvasBefore.SaveAs("response_histogram_before_injection.png");
-
-    // Inject anomalies into normal data (optional)
-    injectAnomalies(normalData, numAnomalies);
+    // Write the tree to the ROOT file
+    tree.Write();
+    outputFile.Close();
 
     // Create a histogram to visualize the response distribution after injecting anomalies
     TH1D histAfterInjection("response_histogram_after_injection", "Response Distribution (After Injection)", 100, -10, 10);
