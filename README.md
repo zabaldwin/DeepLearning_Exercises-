@@ -13,6 +13,7 @@ Provided examples touch on the main concepts that are necessary to understanding
 
 ## _Research Application_
 This iPython notebook is small part of a broader collection of research efforts aimed at applying deep learning and related tecniques to data analysis and particle reconstruction in medium- and high-energy physics.
+
   8) Script to analyze and visualize the latent space representation of a Conditional AutoEncoder, developed and optimized for CERN's future High-Luminosity upgrade | _TensorFlow_
 
 
