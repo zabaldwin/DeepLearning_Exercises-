@@ -12,7 +12,7 @@ Provided examples touch on the main concepts that are necessary to understanding
   7) Use simulated data from a ROOT TTree to train an AutoEncoder to detect anomolies | _TensorFlow_
 
 ## _Research Application_
-  8) Script to analyze and visualize the latent space representation of a conditional auto-encoder, developed and optimized for CERN's future High-Luminosity upgrade | _TensorFlow_
+  8) Script to analyze and visualize the latent space representation of a Conditional AutoEncoder, developed and optimized for CERN's future High-Luminosity upgrade | _TensorFlow_
 
 
 
