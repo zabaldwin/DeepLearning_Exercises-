@@ -9,7 +9,10 @@ Provided examples touch on the main concepts that are necessary to understanding
   4) Perform image classification (with hyper-parameter tunning) using a CNN w/ the CIFAR-10 dataset | _PyTorch_
   5) Generate realistic numbers by training a GAN w/ the MNIST dataset | _TensorFlow_
   6) Generate and mix Spherical Harmonics to train a CNN to aid in classifying mixed wavesets | _PyTorch_
-  7) Use simulated data from a ROOT TTree to train an AutoEncoder to detect anomolies (output not accurate yet) | _TensorFlow_
+  7) Use simulated data from a ROOT TTree to train an AutoEncoder to detect anomolies | _TensorFlow_
+
+## _Research Application_
+  8) Script to analyze and visualize the latent space representation of a conditional auto-encoder, developed and optimized for CERN's future High-Luminosity upgrade | _TensorFlow_
 
 
 
